@@ -17,8 +17,8 @@
             Então o sistema deve exibir a mensagem "É necessário selecionar um produto"
 
             Cenário: Limite do produto
-            Quando eu colocar mais de 10 itens no carrinho, o site deve mostrar uma mensagem falando que o "Limite foi atingido"
-            Então o site deve bloquear a tentativa de colocar mais itens no carrinho
+            Quando eu colocar mais de 10 itens no carrinho
+            Então o site deve bloquear a tentativa de colocar mais itens no carrinho e o sistema deve mostrar uma mensagem falando que o "Limite foi atingido"
 
             Cenário: Limpando o carrinho
             Quando eu clicar no botão de "Limpar" o produto deve voltar ao estado original
