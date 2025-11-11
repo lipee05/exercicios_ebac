@@ -11,11 +11,14 @@
             Cenário: Seleção de cor e tamanho do produto
             Quando eu escolher a cor e tamanho do produto
             Então deve mostrar tudo no carrinho conforme o pedido.
-            E se eu não escolher a cor/tamanho, o site deve mostrar que é obrigatorio a escolha de ambos
+
+            Cenário: Deixando de escolher o produto
+            Quando eu deixar de selecionar cor, tamanho ou quantidade e clicar em "Adicionar ao carrinho"
+            Então o sistema deve exibir a mensagem "É necessário selecionar um produto"
 
             Cenário: Limite do produto
-            Quando eu tentar colocar mais de 10 produtos no carrinho, nao devo conseguir
-            Então o site deve monstar um aviso de limite atingindo
+            Quando eu colocar mais de 10 itens no carrinho, o site deve mostrar uma mensagem falando que o "Limite foi atingido"
+            Então o site deve bloquear a tentativa de colocar mais itens no carrinho
 
             Cenário: Limpando o carrinho
             Quando eu clicar no botão de "Limpar" o produto deve voltar ao estado original
@@ -27,9 +30,9 @@
             Então o sistema deve exibir uma <mensagem>
 
             Exemplos:
-            | quantidade | mensagem                          |
-            | 5          | "Produto adicionado com sucesso!" |
-            | 10         | "Produto adicionado com sucesso!" |
-            | 11         | "Quantidade de itens excedido!"   |
-            | 20         | "Quantidade de itens excedido!"   |
-            | 25         | "Quantidade de itens excedido!"   |
+            | quantidade | mensagem                             |
+            | 0          | Por favor adicione itens ao carrinho |
+            | 1          | "Produto adicionado com sucesso!"    |
+            | 9          | "Produto adicionado com sucesso!"    |
+            | 10         | "Produto adicionado com sucesso!"    |
+            | 11         | "Quantidade de itens excedido!"      |
